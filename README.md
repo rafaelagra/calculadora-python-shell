@@ -1,62 +1,82 @@
 # 🧮 Calculadora em Python e Shell Script
 
-Este projeto é uma calculadora simples criada em **Python**, com um script `.sh` para execução no terminal Linux. A atividade foi desenvolvida com o objetivo de praticar a integração entre Python e Shell Script no Ubuntu.
+Este projeto é uma calculadora simples desenvolvida em **Python**, com um script `.sh` para execução no terminal Linux. A atividade foi realizada como parte do curso de introdução à programação com Python e Shell Script.
 
 ---
 
 ## 📁 Arquivos do projeto
 
-- `calculadora.py`: Código da calculadora desenvolvido em Python.
-- `calculadora.sh`: Script shell que executa o código Python.
-- `comandos.txt`: Lista com os comandos usados no terminal para tornar o script executável e executá-lo.
+- `calculadora.py`: Script Python com a lógica da calculadora.
+- `calculadora.sh`: Script shell que executa o código Python no terminal.
+- `comandos.txt`: Comandos usados no terminal para tornar o script executável e executá-lo.
 - `README.md`: Este arquivo com explicações e instruções.
 
 ---
 
-## 🚀 Como executar a calculadora no Ubuntu
+## 🚀 Como executar o script `.sh`
 
-### 1. Torne o script `.sh` executável:
+1. **Abra o terminal** e navegue até a pasta onde estão os arquivos.
+2. Torne o script executável com:
 
-```bash
-chmod 744 calculadora.sh
+   ```bash
+   chmod 744 calculadora.sh
+Execute o script com:
+./calculadora.sh
+Esse comando irá executar o script em Python automaticamente e abrir o menu da calculadora.
 
-🐍 O que o código Python faz
-O script calculadora.py permite ao usuário realizar operações matemáticas entre dois números digitados. As operações disponíveis são:
+🐍 Explicação do código Python (calculadora.py)
+O código Python implementa uma calculadora interativa com as seguintes funcionalidades:
 
-Adição
+Funcionalidades principais:
+Recebe dois números digitados pelo usuário.
 
-Subtração
+Apresenta um menu de operações:
 
-Multiplicação
+1 – Adição
 
-Divisão
+2 – Subtração
 
-O código usa input() para receber valores, e um laço while para repetir a operação até que o usuário decida sair.
+3 – Multiplicação
 
-Lógica do programa:
-Recebe dois números do usuário.
+4 – Divisão
 
-Mostra um menu de operações.
+Usa estruturas condicionais (if/elif/else) para realizar a operação selecionada.
 
-Realiza a operação escolhida com if/elif/else.
+Exibe o resultado com o comando print().
 
-Mostra o resultado usando print().
+Extras implementados:
+Um laço while permite repetir a operação até o usuário decidir sair (s/n).
 
-Pergunta se o usuário deseja continuar (s ou n).
+O método .lower() permite aceitar tanto "S" quanto "s" como resposta.
+
+Validação com try/except para evitar erros ao digitar valores não numéricos.
+
+Tratamento de erro para divisão por zero com uma mensagem amigável.
 
 🧪 Exemplo de execução
 Olá, digite um valor a ser calculado: 10
 Digite o segundo valor a ser calculado: 5
 
 Escolha a operação que deseja realizar:
-1- Adição
-2- Subtração
-3- Multiplicação
-4- Divisão
+1 - Adição
+2 - Subtração
+3 - Multiplicação
+4 - Divisão
 
 Digite o número da operação desejada: 1
 O resultado da adição é 15.0
 
 Deseja fazer outra operação? (s/n): s
 
-Projeto desenvolvido como parte de uma atividade prática do curso de introdução à programação com Python e Shell Script.
+✅ Comandos utilizados (comandos.txt)
+chmod 744 calculadora.sh
+./calculadora.sh
+
+🛠️ Requisitos
+Python 3 instalado
+
+Sistema operacional Linux (ex: Ubuntu)
+
+Permissão de execução para arquivos .sh
+
+Atividade prática desenvolvida por Rafael Agra no curso de análise de dados da ebac.
